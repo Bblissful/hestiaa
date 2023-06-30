@@ -76,3 +76,7 @@ main {
         grid-template-columns: 1fr;
     }
 }
+
+.result{
+    box-shadow: 2px red;
+}

@@ -71,4 +71,8 @@ main {
     .cardWrapper {
         grid-template-columns: 1fr;
     }
+
+    .myForm {
+        grid-template-columns: 1fr;
+    }
 }

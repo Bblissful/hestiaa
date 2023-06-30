@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+    background: #A52A2A;
+}
+
+.hero {
+    height: 550px;
+    width: 100%;
+}
+
+.hero img {
+    height: 100%;
+    width: 100%;
+}
+
+.myText h1 {
+    font-weight: 700;
+}
+
+.myText {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    border-radius: 8px;
+    background: #cc7941;
+}
+
+.figure {
+    height: 250px;
+}
+
+.figure img {
+    border-radius: 8px;
+}
+
+.star img {
+    height: 25px;
+    width: 25px;
+}
+
+.cardWrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+@media (max-width: 650px) {
+    .cardWrapper {
+        grid-template-columns: 1fr;
+    }
+}

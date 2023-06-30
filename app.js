@@ -65,6 +65,8 @@ let location2 = document.getElementById('location2');
 let error = document.getElementById('error');
 let submit = document.getElementById("submitButton");
 
+let result = document.getElementById("result");
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -79,7 +81,7 @@ form.addEventListener("submit", async (e) => {
     error.innerHTML = "Location must be the same.";
   } else {
     try {
-      const url = 'http://localhost/lighthall-tasks/task%203/process.php';
+      const url = 'http://localhost/lighthall-tasks/task3/process.php';
 
       const data = JSON.stringify({
         cuisine: cuisine1Value,
@@ -97,8 +99,34 @@ form.addEventListener("submit", async (e) => {
 
       const text = await response.text();
 
-      console.log(text);
+      const responseObj = JSON.parse(text);
+      
+      console.log(responseObj.name);
+      
+      let restaurantName = responseObj.name;
+      let restaurantStreet_addrs= responseObj.address['street_addr'];
+      let restaurantCity= responseObj.address['city'];
+      let country= responseObj.address['country'];
+      
+      let cuisines = responseObj.cuisines;
 
+    // Iterate over each cuisine
+    let cuisinesList = "";
+    for (let i = 0; i < cuisines.length; i++) {
+    console.log(cuisines[i]);
+    cuisinesList += `<li>${cuisines[i]}</li>`;
+    }
+
+    result.innerHTML = `
+    <div class='text-xl font-bold mb-4'>Restaurant Name: ${restaurantName}</div>
+    <div class='mb-4'>
+      <h5 class='text-lg font-bold'>Special title treatment</h5>
+      <p class='mt-2'>Restaurant Address: ${restaurantStreet_addrs}, ${restaurantCity}, ${country}</p>
+    </div>
+    <p>Available cuisines:</p>
+    <ul>${cuisinesList}</ul>
+    <div class='mt-4 text-gray-500'></div>
+  `;
 
     } catch (error) {
       console.error(error);

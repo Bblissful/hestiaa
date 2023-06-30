@@ -16,7 +16,7 @@
         </nav>
         <section class="p-6">
             <div>
-                <form action="">
+                <form action="" id="myForm">
                     <div class="myForm">
                         <div>
                             <h1 class="text-3xl text-center font-bold">Person 1</h1>
@@ -24,13 +24,13 @@
                                 <label for="cuisine" class="text-xl text-white">
                                     Cuisine
                                 </label>
-                                <input type="text" id="cuisine" class="p-2">
+                                <input type="text" id="cuisine1" class="p-2">
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="location" class="text-xl text-white">
                                     Location
                                 </label>
-                                <input type="text" id="location" class="p-2">
+                                <input type="text" id="location1" class="p-2">
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="date" class="text-xl text-white">
@@ -55,13 +55,13 @@
                                 <label for="cuisine" class="text-xl text-white">
                                     Cuisine
                                 </label>
-                                <input type="text" id="cuisine" class="p-2">
+                                <input type="text" id="cuisine2" class="p-2">
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="location" class="text-xl text-white">
                                     Location
                                 </label>
-                                <input type="text" id="location" class="p-2">
+                                <input type="text" id="location2" class="p-2">
                             </div>
                             <div class="flex flex-col gap-2">
                                 <label for="date" class="text-xl text-white">
@@ -83,13 +83,15 @@
                     </div>
                     <br>
                     <div class="w-full flex items-center justify-center ">
-                        <button class="p-3 border-white border-2  text-white rounded-lg" type="submit">Submit
+                        <button class="p-3 border-white border-2  text-white rounded-lg" id="submitButton" type="submit">Submit
                             Form</button>
                     </div>
                 </form>
             </div>
         </section>
     </main>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

@@ -58,6 +58,15 @@ main {
     gap: 25px;
 }
 
+.myForm {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 650px) {
     .cardWrapper {
         grid-template-columns: 1fr;
